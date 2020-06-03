@@ -11,9 +11,7 @@ app.get("/", (request, response) => {
   response.send("I love CodersX");
 });
 app.get("/todos", (request, response) => {
-  response.send(
-    "<h2> todos list</h2> <br> <ul><li>Di cho</li><li>Nau com</li><li>Rua bat</li><li>Hoc CodersX</li></ul> "
-  );
+  response.render('todos');
 });
 // listen for requests :)
 app.listen(process.env.PORT, () => {

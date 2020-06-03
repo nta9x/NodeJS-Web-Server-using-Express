@@ -9,10 +9,18 @@ app.set("view engine", "pug");
 app.set("views", "./views");
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
-  response.send("I love CodersX");
+  response.render("index", {
+    name: "NTA"
+  });
 });
 app.get("/todos", (request, response) => {
-  response.render("todos");
+  response.render("todos",{
+    list:[
+      {id: 1,name:"Di cho"},
+      {id: 2,name: "Nau com"}, 
+      {id: 3,name: "Rua bat"}, 
+      {id: 4,name: "Hoc CodersX"}
+    ]});
 });
 // listen for requests :)
 app.listen(process.env.PORT, () => {

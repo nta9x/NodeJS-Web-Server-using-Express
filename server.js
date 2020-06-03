@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
 });
 app.get("/todos", (request, response) => {
   response.render("todos",{
-    list:[
+    todoList:[
       {id: 1,name:"Di cho"},
       {id: 2,name: "Nau com"}, 
       {id: 3,name: "Rua bat"}, 

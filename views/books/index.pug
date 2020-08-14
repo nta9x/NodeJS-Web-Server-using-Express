@@ -1,0 +1,14 @@
+h1 BOOK LIST
+a(href="/") <-- Home
+br
+form(action = "/search")
+  input(type = "text" name = "q" value= value)
+  button Search
+  
+a(href= 'books/create') New
+ul
+  each book in books
+    li
+      span= book.name 
+      span &nbsp
+      a(href= '/books/' + book.id) view

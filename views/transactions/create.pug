@@ -1,0 +1,14 @@
+h2 create transaction
+
+form(action= "/transactions/create", method="POST")
+  label User name:
+  select(name='userName')
+    each item in dataTrans.users
+      option= item.name
+  label Book name:
+  select(name= 'bookName')
+    each item in dataTrans.books
+      option= item.name
+  br
+  button create
+a(href= '/transactions') transaction list

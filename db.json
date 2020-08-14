@@ -1,0 +1,52 @@
+{
+  "transactions": [
+    {
+      "id": "BtygmOxzi",
+      "idUser": "xNN9G91vt",
+      "idBook": "J9HM8A227"
+    },
+    {
+      "id": "XRncVVgQl",
+      "idUser": "wYI3teYXL",
+      "idBook": "J9HM8A227"
+    },
+    {
+      "id": "XEkieHHq4",
+      "idUser": "FdhxA9IPh",
+      "idBook": "uGOxPG4lL"
+    }
+  ],
+  "books": [
+    {
+      "name": "book2",
+      "id": "SPmhAeRyK"
+    },
+    {
+      "name": "book3",
+      "id": "J9HM8A227"
+    },
+    {
+      "name": "book4",
+      "id": "uGOxPG4lL"
+    }
+  ],
+  "users": [
+    {
+      "name": "user1",
+      "id": "FdhxA9IPh"
+    },
+    {
+      "name": "user2",
+      "id": "xNN9G91vt"
+    },
+    {
+      "name": "user3",
+      "id": "wYI3teYXL"
+    },
+    {
+      "name": "Nguyễn Tuấn Anh",
+      "phone": "0982491541",
+      "id": "p1kPIQGOz"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+extends ../layouts/_layoutPage
+block content
+    h2 view User
+    b ID: 
+    span=users.id
+    div &nbsp
+    b Name:
+    span=users.name
+    hr
+    p
+        a(href= '/users/delete/'+ users.id) delete
+    a(href= '/users') <-- user list

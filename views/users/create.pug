@@ -1,0 +1,14 @@
+extends ../layouts/_layoutPage
+block content
+  h1 create
+  if err
+    each item in err
+      .alert.alert-danger= item
+  form(action= "/users/create", method= "POST")
+    .form-group
+      label(for="name") Name
+      input#name.form-control(type= "text" name= "name" value= values ? values.name : '')
+    .form-group  
+      label(for="phone") Phone
+      input#phone.form-control(type= "text" name= "phone" value= values ? values.phone : '')
+    button.btn.btn-primary Create

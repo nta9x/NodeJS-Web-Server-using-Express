@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 71" width="70" height="69">
+	<defs>
+		<image width="72" height="72" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAAXNSR0IB2cksfwAAAE5QTFRFAHv/A3r9Hnz0i6vrZpPmfaHow9f1////8PX8Z5Pm0uH3IHzzpsHvmLbtmbftQIXs4er6p8HvfqLo8fX8xNf1ts3yiq3q4uz6Y4ri0+D324RMwQAAAX5JREFUeJztl9FigyAMRbVOsbppLaDr///o3Lq2JIEQsI/cR5UjIZeLVlVRUdEbVJ+apvk4Cmk7dVd/PoBpB+VozMV89gqoy8N8KaI6A9P2lKOmdE7nwezrnYqZfdPJWO5zAJNaW5ijLkmgMCetb/51Tq+t5jhqkIMWFqTkoFDn/3WVcmDLNAEZKciCYYvJrg2OmlcCEqbSFVbm6eEiAw140IZBwo2LKquqiUxJtHHhkuj9ykxAInNfwBD7e4k4QGRuOOSvQRaDJAaAPVPfp100ugXmHsggn2xqZUGlVhbU/J7KBAYQcqLJjUJfj3fRfRtbJJSNz91JQREDoGx85sWNgHgDjKH5033L14aevwXfoCIJADesWl93aHKzBkDPOmcq3bdcAiBba+eW52OAAaHXgmimIOYbIDwhjwGYEwBGqoFvxAbgDOnaWuMHoQEM+23zav620ruOAWzkFHlMxnrD5jHfLR6zk9HGrKHIqu1mzHTkH6KoqKiIFT0d8vQD4YkrcGaO83AAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+</svg>

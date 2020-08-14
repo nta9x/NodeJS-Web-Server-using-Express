@@ -5,18 +5,22 @@ html
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
             a.navbar-brand(href='#') 
                 img.rounded.d-inline-block.align-top( src='/images/logo.svg', width='30', height='30', alt='')
-                |     Fashi
+                |     NT
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
+                ul.navbar-nav.drop-down
                     li.nav-item
                         a.nav-link(href='/') Home
                     li.nav-item
                         a.nav-link(href='/users') Users
                     li.nav-item
-                        a.nav-link(href='#') Pricing
+                        a.nav-link(href='/books') Books
                     li.nav-item
-                        a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+                        a.nav-link(href='transactions') Transactions
+                    li.nav-item
+                        a.nav-link(href='#', tabindex='-1', aria-disabled='true') about
+                .navbar-nav.flex-row.ml-md-auto
+                    a.nav-item.nav-link.p-2.border.border-primary.rounded(href='/auth/login', rel='noopener') Sign in
         .container.pt-3
             block content

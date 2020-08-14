@@ -1,7 +1,6 @@
 extends ../layouts/_layoutPage
 block content 
   h2 create transaction
-
   form(action= "/transactions/create", method="POST")
     label User name:
     select(name='userName')

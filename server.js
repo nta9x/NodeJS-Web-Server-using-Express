@@ -12,7 +12,7 @@ const port = 3000;
 
 const app = express();
 
-app.use(cookieParser())
+app.use(cookieParser('asdhasldhakshuihduasfd'));
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));

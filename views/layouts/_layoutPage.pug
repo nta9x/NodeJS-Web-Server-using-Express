@@ -21,6 +21,11 @@ html
                     li.nav-item
                         a.nav-link(href='#', tabindex='-1', aria-disabled='true') about
                 .navbar-nav.flex-row.ml-md-auto
-                    a.nav-item.nav-link.p-2.border.border-primary.rounded(href='/auth/login', rel='noopener') Sign in
+                    if user
+                        p.nav-item.p-2(href='#') Hello:
+                        a.nav-item.nav-link.p-2(href='#')=user.name
+                        a.nav-item.p-2(href='/auth/login') Sign out
+                    else
+                        a.nav-item.nav-link.p-2.border.border-primary.rounded(href='/auth/login', rel='noopener') Sign in
         .container.pt-3
             block content

@@ -1,4 +1,5 @@
 const db = require('../db');
+const { signedCookie } = require('cookie-parser');
 
 module.exports.login = function(req, res) {
     res.render('auth/login');
@@ -23,6 +24,6 @@ module.exports.postLogin = function(req, res) {
         });
         return
     }
-    res.cookie('userId', user.id);
+    res.cookie('userId', user.id, {signed: true});
     res.redirect('/');
 };

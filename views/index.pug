@@ -1,10 +1,13 @@
 extends ./layouts/_layoutPage.pug
 block content
-    h1 Hello #{name}
-    ul
-        li
-            a(href= '/users') user list
-        li
-            a(href= '/books') book list
-        li 
-            a(href= '/transactions') transactions list
+    .bg
+        .text-center
+            .cover-container.d-flex.h-75.p-3.mx-auto.flex-column.justify-content-center
+                main.inner.cover(role='main')
+                    img.rounded.mb-4(src='/images/logo.png', alt='', width='100', height='100')
+                    h1.cover-heading Cover your page.
+                    p.lead
+                        | Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
+                    p.lead
+                        a.btn.btn-lg.btn-primary(href='#') Learn more
+            

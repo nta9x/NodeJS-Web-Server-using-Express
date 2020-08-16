@@ -8,11 +8,17 @@ block content
             if err
                 each item in err
                     .alert.alert-danger= item
-            label.sr-only(for='inputEmail') Email address
-            input#inputEmail.form-control(type='email',name='email', placeholder= 'Email address', required='', autofocus='', value= values ? values.name : '')
-            label.sr-only(for='inputPassword') Password
-            input#inputPassword.form-control(type='password',name='password' placeholder='Password', required='', value= values ? values.name : '')
-            .checkbox.mb-3
+            .input-group.mb-3
+                .input-group-prepend
+                    span#inputGroup-sizing-default.input-group-text
+                        i.fa.fa-envelope
+                input.form-control(type='email', name="email",placeholder= 'Email address', required='', autofocus='', value= values ? values.name : '', aria-label='Default', aria-describedby='inputGroup-sizing-default')
+            .input-group.mb-3
+                .input-group-prepend
+                    span#inputGroup-sizing-default.input-group-text
+                        i.fa.fa-key
+                input.form-control(type='password', name="password",placeholder= 'password', required='', autofocus='', value= values ? values.name : '', aria-label='Default', aria-describedby='inputGroup-sizing-default')
+
             label
                 input(type='checkbox', value='remember-me')
                 |  Remember me

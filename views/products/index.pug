@@ -1,0 +1,31 @@
+extends ../layouts/_layoutPage
+block content
+  h2 PRODUCT LIST
+  .d-flex.align-items-center
+    //new
+    a.btn.btn-primary.mb-auto(href= 'products/create') New
+    //search
+    form.form-group.d-flex.ml-auto(action = "/products/search")
+      .input-group.mb-3
+        input.form-control(type = "text" name = "q", value= value, placeholder='search products')
+        .input-group-prepend
+          button.btn.btn-primary.rounded-right(type="submit")
+            i.fa.fa-search
+  table.table  
+    tr.text-capitalize
+      th Name
+      th image
+      th description
+      th price
+      th.text-center Actions
+    each product in products
+      tr
+        td= product.name
+        td 
+          img(src= product.image, alt='', width='50', height='30')
+        td= product.description
+        td= product.price + "$"
+        td.text-center
+            a.btn.btn-light(href= '/products/view/' + product.id) view
+            a.btn.btn-light(href= '/products/delete/' + product.id) edit
+            a.btn.btn-light(href= '/products/' + product.id) delete

@@ -3,62 +3,77 @@
     {
       "id": "BtygmOxzi",
       "idUser": "xNN9G91vt",
-      "idBook": "J9HM8A227"
+      "idproduct": "J9HM8A227"
     },
     {
       "id": "XRncVVgQl",
       "idUser": "wYI3teYXL",
-      "idBook": "J9HM8A227"
+      "idproduct": "J9HM8A227"
     },
     {
       "id": "XEkieHHq4",
       "idUser": "FdhxA9IPh",
-      "idBook": "uGOxPG4lL"
-    }
-  ],
-  "books": [
-    {
-      "name": "book2",
-      "id": "SPmhAeRyK"
-    },
-    {
-      "name": "book3",
-      "id": "J9HM8A227"
-    },
-    {
-      "name": "book4",
-      "id": "uGOxPG4lL"
+      "idproduct": "uGOxPG4lL"
     }
   ],
   "users": [
     {
-      "name": "user1",
-      "id": "FdhxA9IPh"
-    },
-    {
-      "name": "user2",
-      "id": "xNN9G91vt"
-    },
-    {
-      "name": "user3",
-      "id": "wYI3teYXL"
-    },
-    {
       "name": "Nguyễn Tuấn Anh",
       "phone": "0982491541",
-      "id": "p1kPIQGOz",
+      "id": "fOcCrHbOq",
       "email": "nguyentuananhk143@gmail.com",
       "password": "e10adc3949ba59abbe56e057f20f883e"
+    }
+  ],
+  "products": [
+    {
+      "name": "meo",
+      "id": "FdhxA9IPh",
+      "image": "https://loremflickr.com/320/240",
+      "description": "Voluptate labore fugiat consequat proident mollit enim sit.",
+      "price": "1500"
     },
     {
-      "name": "Nguyễn Tuấn Anh",
-      "phone": "0982491541",
-      "id": "2Z2ljoz1s"
+      "name": "ca",
+      "id": "xNN9G91vt",
+      "image": "https://loremflickr.com/320/320",
+      "description": "Aliquip tempor minim proident consectetur.",
+      "price": "1100"
     },
     {
-      "name": "Nguyễn Tuấn Anh",
-      "phone": "0982491541",
-      "id": "fOcCrHbOq"
+      "name": "trau",
+      "id": "wYI3teYXL",
+      "image": "https://loremflickr.com/320/300",
+      "description": "Est do commodo nisi nisi sit tempor dolor culpa dolore adipisicing laboris veniam.",
+      "price": "2000"
+    },
+    {
+      "name": "ga",
+      "id": "p1kPIQGOz",
+      "image": "https://loremflickr.com/320/250",
+      "description": "Excepteur irure minim pariatur sunt consequat.",
+      "price": "1700"
+    },
+    {
+      "name": "cho",
+      "id": "2Z2ljoz1s",
+      "image": "https://loremflickr.com/320/255",
+      "description": "Veniam nisi anim anim do.",
+      "price": "100"
+    },
+    {
+      "name": "lonwj",
+      "id": "fOcCrHbOq",
+      "image": "https://loremflickr.com/320/240",
+      "description": "Enim mollit tempor aute aliqua voluptate.",
+      "price": "3000"
+    },
+    {
+      "name": "NguyenTuanAnh",
+      "description": "bird",
+      "price": "250000",
+      "image": "https://loremflickr.com/320/330",
+      "id": "Gp9fZLsGK"
     }
   ]
 }

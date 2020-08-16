@@ -1,0 +1,28 @@
+extends ../layouts/_layoutPage
+block content
+  h2 Product > create
+  if err
+    each item in err
+      .alert.alert-danger= item
+  form(action= "/products/create", method= "POST")
+    .form-group
+      label(for="name") Name
+      input#name.form-control(type= "text" name= "name" value= values ? values.name : '')
+    .form-group
+      label(for="description") description
+      input#description.form-control(type= "text" name= "description" value= values ? values.description : '')
+    .form-group  
+      label(for="price") price
+      input#phone.form-control(type= "number" name= "price" value= values ? values.price : '')
+    .form-group
+      label(for="image") image
+      .input-group.mb-3#image
+        select#inputGroupSelect02.custom-select.col-4(name="image")
+          option(selected='') Choose...
+          option(value='https://loremflickr.com/320/330') 320x330
+          option(value='https://loremflickr.com/320/340') 320x340
+          option(value='https://loremflickr.com/320/350') 320x350
+        .input-group-append
+          label.input-group-text(for='inputGroupSelect02') Options
+    button.btn.btn-primary Create
+

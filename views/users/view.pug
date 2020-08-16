@@ -1,12 +1,12 @@
 extends ../layouts/_layoutPage
 block content
-    h2 view User
-    b ID: 
-    span=users.id
-    div &nbsp
-    b Name:
-    span=users.name
-    hr
-    p
-        a(href= '/users/delete/'+ users.id) delete
-    a(href= '/users') <-- user list
+    h2 View user
+    label.form-control ID: 
+        span=users.id
+    label.form-control Name: 
+        span=users.name
+    label.form-control email: 
+        span=users.email
+
+    a.btn.btn-primary.mr-2(href= '/users') users list
+    a.btn.btn-secondary(href= '/users/delete/'+ users.id) delete

@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', UserController.index);
 router.get('/create',UserController.create);
 router.post('/create',validate.postCreate, UserController.postCreate);
-router.get('/:id', UserController.views);
+router.get('/view/:id', UserController.views);
 router.get('/delete/:id', UserController.delete);
 
 module.exports = router;

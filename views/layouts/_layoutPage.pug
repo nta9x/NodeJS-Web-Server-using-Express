@@ -1,5 +1,6 @@
 html
     head
+        title NTA-Fashi
         link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css")
         script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
@@ -7,64 +8,65 @@ html
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV', crossorigin='anonymous')
 
     body
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href='#') 
-                img.rounded.d-inline-block.align-top( src='/images/logo.png', width='30', height='30', alt='')
-                |   Fashi
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item
-                        a.nav-link(href='/') 
-                            i.fas.fa-home
-                            |   Home
-                    li.nav-item
-                        a.nav-link(href='/users') 
-                            i.fas.fa-users
-                            |   Users
-                    li.nav-item
-                        a.nav-link(href='/books') 
-                            i.fas.fa-book
-                            |   Books
-                    li.nav-item
-                        a.nav-link(href='/transactions') 
-                            i.fas.fa-book-reader
-                            |   Transactions
-                    li.nav-item.dropdown
-                        a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                            i.fas.fa-bars
-                            |   Category
-                        .dropdown-menu(aria-labelledby='navbarDropdown')
-                            a.dropdown-item(href='#') waters
-                            a.dropdown-item(href='#') cakes
-                            .dropdown-divider
-                            a.dropdown-item(href='#') Something else here
-                    li.nav-item
-                        a.nav-link(href='#') 
-                            i.fas.fa-info
-                            |   about
-                ul.navbar-nav.flex-row.ml-md-auto.align-items-center
-                    if user
+        header
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize
+                a.navbar-brand(href='#') 
+                    img.rounded.d-inline-block.align-top( src='/images/logo.png', width='30', height='30', alt='')
+                    |   fashi
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
                         li.nav-item
-                            i.fas.fa-cat.nav-link.nav-link 
-                                | Hello:
-                        li.nav-item    
-                            a.font-italic.nav-link(href='#')=user.name
+                            a.nav-link(href='/') 
+                                i.fas.fa-home
+                                |   Home
                         li.nav-item
-                            a.nav-item(href='/auth/logout')
-                                i.fas.fa-sign-out-alt.nav-link
-                    else
-                        a.nav-item.nav-link.fas.fa-sign-in-alt(href='/auth/login', rel='noopener') 
-                            | Sign in
-        .container.p-3.h-100
-            block content
-        .text-center.d-flex.align-items-end.justify-content-center
-            footer.mastfoot.mt-auto
-                .inner
-                    p
-                        | Cover template for 
-                        a(href='https://getbootstrap.com/') Bootstrap
-                        | , by 
-                        a(href='https://twitter.com/mdo') @nta
-                        | .
+                            a.nav-link(href='/users') 
+                                i.fas.fa-users
+                                |   Users
+                        li.nav-item
+                            a.nav-link(href='/products') 
+                                i.fas.fa-cubes
+                                |   products
+                        li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                i.fas.fa-bars
+                                |   Category
+                            .dropdown-menu(aria-labelledby='navbarDropdown')
+                                a.dropdown-item(href='#') waters
+                                a.dropdown-item(href='#') cakes
+                                .dropdown-divider
+                                a.dropdown-item(href='#') Something else here
+                        li.nav-item
+                            a.nav-link(href='#') 
+                                i.fas.fa-info
+                                |   about
+                    ul.navbar-nav.flex-row.ml-md-auto.align-items-center
+                        if user
+                            li.nav-item
+                                i.fas.fa-cat.nav-link.nav-link 
+                                    | Hello:
+                            li.nav-item    
+                                a.font-italic.nav-link(href='#')=user.name
+                            li.nav-item
+                                a.nav-item(href='/auth/logout')
+                                    i.fas.fa-sign-out-alt.nav-link
+                        else
+                            a.nav-item.nav-link.fas.fa-sign-in-alt(href='/auth/login', rel='noopener') 
+                                | Sign in
+        main
+            .container.p-3.h-100
+                block content
+        footer.text-muted.text-center
+            .container
+                p.float-right
+                    a(href='#') 
+                        i.fa.fa-chevron-circle-up.fa-3x
+                p Album example is &copy; Bootstrap, but please download and customize it for yourself!
+                p
+                    | New to Bootstrap? 
+                    a(href='https://getbootstrap.com/') Visit the homepage
+                    |  or read our 
+                    a(href='/docs/4.5/getting-started/introduction/') getting started guide
+                    | .

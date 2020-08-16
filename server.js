@@ -1,8 +1,7 @@
 //module npm
 const express = require('express');;
-const userRouter = require('./routes/user.route');
-const bookRouter = require('./routes/book.route');
-const transactionRouter =require('./routes/transaction.route');
+userRouter = require('./routes/user.route');
+const productRouter = require('./routes/product.route');
 const loginRouter = require('./routes/login.route');
 const logoutRouter = require('./routes/logout.route');
 
@@ -32,14 +31,13 @@ app.get('/',checkLogin.requireAuth, (req, res)=>{
 });
 
 
-app.get('/search',(req, res)=> {
+app.get('/a/search',(req, res)=> {
     var q = req.query.q;
-    var resul = db.get('users').value().filter( user => user.name.toLowerCase().indexOf(q.toLowerCase())!=-1);
-    res.render('users/', {users:resul, value: q})
+    var resul = db.get('products').value().filter( product => product.name.toLowerCase().indexOf(q.toLowerCase())!=-1);
+    res.render('products/', {products:resul, value: q})
 });
 app.use('/users',checkLogin.requireAuth, userRouter);
-app.use('/books',checkLogin.requireAuth, bookRouter);
-app.use('/transactions',checkLogin.requireAuth, transactionRouter);
+app.use('/products',checkLogin.requireAuth, productRouter);
 app.use('/auth', loginRouter);
 app.use('/auth', logoutRouter);
 

@@ -1,0 +1,15 @@
+extends ../layouts/_layoutPage
+block content
+    h2 View Product
+    label.form-control ID: 
+        span=products.id
+    label.form-control Name: 
+        span=products.name
+    label.form-control Image: 
+        span=products.image
+    label.form-control Description: 
+        span=products.description
+    
+    a.btn.btn-primary.mr-2(href= '/products') products list
+    a.btn.btn-secondary(href= '/products/delete/'+ products.id) delete
+

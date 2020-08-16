@@ -4,6 +4,8 @@ const userRouter = require('./routes/user.route');
 const bookRouter = require('./routes/book.route');
 const transactionRouter =require('./routes/transaction.route');
 const loginRouter = require('./routes/login.route');
+const logoutRouter = require('./routes/logout.route');
+
 const checkLogin = require('./validate/checkLogin');
 
 var cookieParser = require('cookie-parser')
@@ -38,6 +40,7 @@ app.get('/search',(req, res)=> {
 app.use('/users',checkLogin.requireAuth, userRouter);
 app.use('/books',checkLogin.requireAuth, bookRouter);
 app.use('/transactions',checkLogin.requireAuth, transactionRouter);
-app.use('/auth', loginRouter)
+app.use('/auth', loginRouter);
+app.use('/auth', logoutRouter);
 
 app.listen(port, () => console.log('Example app listening at http://localhost:' + port));

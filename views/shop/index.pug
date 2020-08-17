@@ -1,0 +1,43 @@
+extends ../layouts/_layoutPage
+block content
+  #demo.carousel.slide(data-ride='carousel')
+    // Indicators
+    ul.carousel-indicators
+      li.active(data-target='#demo', data-slide-to='0')
+      li(data-target='#demo', data-slide-to='1')
+      li(data-target='#demo', data-slide-to='2')
+    // The slideshow
+    .carousel-inner.w-auto.h-75
+      .carousel-item.active
+        img(src='https://loremflickr.com/1100/500/vietnam,girl/all')
+      .carousel-item
+        img(src='https://loremflickr.com/1100/510/vietnam,girl/all')
+      .carousel-item
+        img(src='https://loremflickr.com/1100/520/vietnam,girl/all')
+    // Left and right controls
+    a.carousel-control-prev(href='#demo', data-slide='prev')
+      span.carousel-control-prev-icon
+    a.carousel-control-next(href='#demo', data-slide='next')
+      span.carousel-control-next-icon
+  .container
+    .nav.navbar.navbar-expand-lg
+      .nav-item
+        | menu bar
+  .container.text-capitalize
+    .row
+      each product in products
+        .col-sm-6.col-md-3.mt-2
+          .card
+            img.card-img-top(src='/images/avatar.png', alt='Card image', style='width:100%')
+            .card-body
+              h4.card-title
+                p=product.name
+              .card-text.d-flex.justify-content-between
+                del.font-italic= product.price +"$"
+                h4
+                  span.badge.badge-Warning=product.price+"$"
+
+              .d-flex.justify-content-between
+                button.btn.btn-success(href='#')
+                  i.fas.fa-shopping-cart
+                a.ml-3.btn.btn-light(href='#') view detail

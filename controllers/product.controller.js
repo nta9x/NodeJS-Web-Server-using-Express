@@ -30,8 +30,6 @@ module.exports.delete = function(req, res){
 };
 module.exports.search = function (req, res){
     var q = req.query.q;
-    console.log("da nhay vao day");
-    console.log(q);
     var resul = db.get('products').value().filter( product => product.name.toLowerCase().indexOf(q.toLowerCase())!=-1);
     res.render('products/', {products:resul, value: q})
 };

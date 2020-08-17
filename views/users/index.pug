@@ -3,17 +3,27 @@ block content
   h1 USER LIST
   .d-flex.align-items-center
     a.btn.btn-primary.mb-auto(href= 'users/create') New
-    form.form-group.d-flex.ml-auto(action = "/search")
-      input.form-control(type = "text" name = "q", value= value, placeholder='search user')
-      button.btn.btn-primary.ml-1 Search
+    //search
+    form.form-group.d-flex.ml-auto(action = "/users/search")
+      .input-group.mb-3
+        input.form-control(type = "text" name = "q", value= value, placeholder='search users')
+        .input-group-prepend
+          button.btn.btn-primary.rounded-right(type="submit")
+            i.fa.fa-search
   table.table  
     tr
       th Name
       th Phone
+      th Email
+      th Password
       th Actions
     each user in users
-      tr
+      tr.text-center
         td= user.name 
-        td= user.phone 
+        td= user.phone
+        td= user.email 
+        td= user.password 
         td
-          a.btn.btn-ligth(href= '/users/view/' + user.id) view
+          a.btn.btn-light(href= '/users/view/' + user.id) view
+          a.btn.btn-light(href= '/users/delete/' + user.id) edit
+          a.btn.btn-light(href= '/users/' + user.id) delete

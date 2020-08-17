@@ -1,12 +1,25 @@
 extends ../layouts/_layoutPage
 block content
     h2 View user
-    label.form-control ID: 
-        span=users.id
-    label.form-control Name: 
-        span=users.name
-    label.form-control email: 
-        span=users.email
+    .container.p-5
+        .row.d-lex.align-items-center
+            .col-sm-3.text-center
+                img.rounded.border.border-primary( src='https://loremflickr.com/320/240', width='200', height='200', alt='')
+                | Avatar
+            .col-sm
+                label.form-control 
+                    b ID: 
+                    span=users.id
+                label.form-control 
+                    b Name: 
+                    span=users.name
+                label.form-control 
+                    b phone: 
+                    span=users.phone
+                label.form-control 
+                    b password: 
+                    span=users.password
+                a.btn.btn-primary.mr-2(href= '/users') users list
+                a.btn.btn-success.mr-2(href= '/users/edit/'+ users.id) edit
+                a.btn.btn-secondary(href= '/users/delete/'+ users.id) delete            
 
-    a.btn.btn-primary.mr-2(href= '/users') users list
-    a.btn.btn-secondary(href= '/users/delete/'+ users.id) delete

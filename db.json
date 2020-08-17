@@ -18,11 +18,18 @@
   ],
   "users": [
     {
-      "name": "Nguyễn Tuấn Anh",
+      "name": "Nguyen Tuan Anh",
       "phone": "0982491541",
-      "id": "fOcCrHbOq",
       "email": "nguyentuananhk143@gmail.com",
-      "password": "e10adc3949ba59abbe56e057f20f883e"
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "id": "6aQRz2UvC"
+    },
+    {
+      "name": "Nguyen",
+      "phone": "0987654321",
+      "email": "nta1996@gmail.com",
+      "password": "c20ad4d76fe97759aa27a0c99bff6710",
+      "id": "LN0Ko0b07"
     }
   ],
   "products": [

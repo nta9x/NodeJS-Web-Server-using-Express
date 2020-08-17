@@ -1,12 +1,19 @@
 html
     head
         title NTA-Fashi
-        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css")
-        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
-        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN', crossorigin='anonymous')
-        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV', crossorigin='anonymous')
-
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+        style.
+            /* Make the image fully responsive */
+            .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            }
     body
         header
             nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize
@@ -20,7 +27,11 @@ html
                         li.nav-item
                             a.nav-link(href='/') 
                                 i.fas.fa-home
-                                |   Home
+                                |   home
+                        li.nav-item
+                            a.nav-link(href='/shop') 
+                                i.fas.fa-shopping-cart
+                                |   Shop
                         li.nav-item
                             a.nav-link(href='/users') 
                                 i.fas.fa-users
@@ -45,8 +56,7 @@ html
                     ul.navbar-nav.flex-row.ml-md-auto.align-items-center
                         if user
                             li.nav-item
-                                i.fas.fa-cat.nav-link.nav-link 
-                                    | Hello:
+                                img.rounded-circle.d-inline-block.border.border-primary( src='/images/avatar.png', width='30', height='30', alt='')
                             li.nav-item    
                                 a.font-italic.nav-link(href='#')=user.name
                             li.nav-item
@@ -56,17 +66,16 @@ html
                             a.nav-item.nav-link.fas.fa-sign-in-alt(href='/auth/login', rel='noopener') 
                                 | Sign in
         main
-            .container.p-3.h-100
-                block content
-        footer.text-muted.text-center
-            .container
-                p.float-right
-                    a(href='#') 
-                        i.fa.fa-chevron-circle-up.fa-3x
-                p Album example is &copy; Bootstrap, but please download and customize it for yourself!
-                p
-                    | New to Bootstrap? 
-                    a(href='https://getbootstrap.com/') Visit the homepage
-                    |  or read our 
-                    a(href='/docs/4.5/getting-started/introduction/') getting started guide
-                    | .
+            block content
+        //- footer.text-muted.text-center.float-bottom
+        //-     .container
+        //-         p.float-right
+        //-             a(href='#') 
+        //-                 i.fa.fa-chevron-circle-up.fa-3x
+        //-         p Album example is &copy; Bootstrap, but please download and customize it for yourself!
+        //-         p
+        //-             | New to Bootstrap? 
+        //-             a(href='https://getbootstrap.com/') Visit the shoppage
+        //-             |  or read our 
+        //-             a(href='/docs/4.5/getting-started/introduction/') getting started guide
+        //-             | .

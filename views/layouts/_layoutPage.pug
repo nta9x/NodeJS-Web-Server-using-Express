@@ -16,7 +16,7 @@ html
             }
     body
         header
-            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize.fixed-top
                 a.navbar-brand(href='#') 
                     img.rounded.d-inline-block.align-top( src='/images/logo.png', width='30', height='30', alt='')
                     |   fashi
@@ -65,7 +65,7 @@ html
                         else
                             a.nav-item.nav-link.fas.fa-sign-in-alt(href='/auth/login', rel='noopener') 
                                 | Sign in
-        main
+        main.mt-5.pt-2.mr-5.ml-5.h-100
             block content
         //- footer.text-muted.text-center.float-bottom
         //-     .container
@@ -79,3 +79,7 @@ html
         //-             |  or read our 
         //-             a(href='/docs/4.5/getting-started/introduction/') getting started guide
         //-             | .
+        footer.py-5.bg-dark
+            .container
+                p.m-0.text-center.text-white Copyright &copy; Your Website 2020
+

@@ -29,7 +29,7 @@ app.get('/',checkLogin.requireAuth, (req, res)=>{
     res.render('index')
 });
 
-app.use('/shop',checkLogin.requireAuth, shopRouter);
+app.use('/shop', shopRouter);
 app.use('/users',checkLogin.requireAuth, userRouter);
 app.use('/products',checkLogin.requireAuth, productRouter);
 app.use('/auth', loginRouter);

@@ -1,5 +1,6 @@
 extends ../layouts/_layoutPage
 block content
+  
   #demo.carousel.slide(data-ride='carousel')
     // Indicators
     ul.carousel-indicators
@@ -9,35 +10,84 @@ block content
     // The slideshow
     .carousel-inner.w-auto.h-75
       .carousel-item.active
-        img(src='https://loremflickr.com/1100/500/vietnam,girl/all')
+        img(src='https://loremflickr.com/1100/400/girl/all')
       .carousel-item
-        img(src='https://loremflickr.com/1100/510/vietnam,girl/all')
+        img(src='https://loremflickr.com/1100/405/girl/all')
       .carousel-item
-        img(src='https://loremflickr.com/1100/520/vietnam,girl/all')
+        img(src='https://loremflickr.com/1100/410/girl/all')
     // Left and right controls
     a.carousel-control-prev(href='#demo', data-slide='prev')
       span.carousel-control-prev-icon
     a.carousel-control-next(href='#demo', data-slide='next')
       span.carousel-control-next-icon
-  .container
-    .nav.navbar.navbar-expand-lg
-      .nav-item
-        | menu bar
-  .container.text-capitalize
+  
+  .text-capitalize.bg-light.ml-1.pr-5
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize.d-flex.justify-content-end.text-center
+      
+      select.mr-2#perPage.form-control.col-1(name='perPage',placeholder=perPage)
+        //- a(href="/shop?perPage=4")  4
+        option(value='4') 4
+        option(value='8') 8
+        option(value='12') 12
+        option(value='16') 16
+      label.mt-2(for='perPage')    product/page
     .row
-      each product in products
-        .col-sm-6.col-md-3.mt-2
-          .card
-            img.card-img-top(src='/images/avatar.png', alt='Card image', style='width:100%')
-            .card-body
-              h4.card-title
-                p=product.name
-              .card-text.d-flex.justify-content-between
-                del.font-italic= product.price +"$"
-                h4
-                  span.badge.badge-Warning=product.price+"$"
-
-              .d-flex.justify-content-between
-                button.btn.btn-success(href='#')
-                  i.fas.fa-shopping-cart
-                a.ml-3.btn.btn-light(href='#') view detail
+      .col-lg-2
+        .list-group
+          .list-group-item
+            a category 1
+          .list-group-item
+            a category 2
+          .list-group-item
+            a category 3
+      .col-lg-10
+        .row
+          each product in products
+            .col-sm-6.col-md-3.mb-3
+              .card
+                .h-75
+                  img.card-img-top.img-responsive(src=''+ product.image + product.h +'/girl/all' , alt='Card image', height='200')
+                .card-body
+                  h5.card-title
+                    p=product.name
+                  .card-text.d-flex.justify-content-between
+                    h6 
+                      del.font-italic="price: $"+product.oldPrice
+                    h4
+                      .badge.badge-Warning="$"+product.price
+                  .d-flex.justify-content-between
+                    button.btn.btn-success(href='#')
+                      i.fas.fa-shopping-cart
+                    a.ml-3.btn.btn-primary(href='#') detail
+        .row.mt-3
+          .col-6
+            p.page-item.mt-2.ml-2
+                b page: 
+                span=page
+                |   / 
+                span=totalPage 
+          .col-6
+            ul.pagination.justify-content-end
+              li.page-item
+                a.page-link(href='/shop?page='+ (page-1) ) &laquo;
+              li.page-item.active
+                a.page-link(href=''+ a[0])
+                  .p=page
+              li.page-item
+                a.page-link(href=''+ a[1]) 
+                  .p=page+1
+              li.page-item
+                a.page-link(href=''+ a[2] )
+                  .p=page+2
+              li.page-item
+                a.page-link(href=''+ a[3]) 
+                  .p=page+3
+              li.page-item
+                a.page-link(href=''+ a[4] )
+                  .p=page+4
+              li.page-item
+                a.page-link(href=''+ a[5] )
+                  .p=page+5
+              li.page-item
+                a.page-link(href=''+ a[1]) &raquo;
+        

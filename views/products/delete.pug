@@ -1,12 +1,12 @@
 extends ../layouts/_layoutPage
 block content
-    h2 delete Book
+    h2 delete products
     b ID: 
-    span=books.id
+    span=product.id
     div &nbsp
     b Name:
-    span=books.name
+    span=product.name
     hr
     p
-        a(href= '/books/delete') delete
-    a(href= '/books') <-- book list
+        a(href= '/products/delete') delete
+    a(href= '/products') <-- products list

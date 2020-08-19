@@ -16,7 +16,7 @@ html
             }
     body
         header
-            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize.fixed-top
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize
                 a.navbar-brand(href='#') 
                     img.rounded.d-inline-block.align-top( src='/images/logo.png', width='30', height='30', alt='')
                     |   fashi
@@ -65,7 +65,7 @@ html
                         else
                             a.nav-item.nav-link.fas.fa-sign-in-alt(href='/auth/login', rel='noopener') 
                                 | Sign in
-        main.mt-5.pt-2.mr-5.ml-5.h-100
+        main.bg-light
             block content
         //- footer.text-muted.text-center.float-bottom
         //-     .container

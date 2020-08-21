@@ -1,49 +1,51 @@
 extends ../layouts/_layoutPage
 block content
-  .row.h-50.pl-4
-    .row-md-8.w-75
-      #demo.carousel.slide(data-ride='carousel')
-        // Indicators
-        ul.carousel-indicators
-          li.active(data-target='#demo', data-slide-to='0')
-          li(data-target='#demo', data-slide-to='1')
-          li(data-target='#demo', data-slide-to='2')
-        // The slideshow
-        .carousel-inner
-          .carousel-item.active
-            img(src='https://loremflickr.com/500/150/girl/all')
-          .carousel-item
-            img(src='https://loremflickr.com/500/160/girl/all')
-          .carousel-item
-            img(src='https://loremflickr.com/500/155/girl/all')
-          // Left and right controls
-          a.carousel-control-prev(href='#demo', data-slide='prev')
-            span.carousel-control-prev-icon
-          a.carousel-control-next(href='#demo', data-slide='next')
-            span.carousel-control-next-icon
-    .row.w-25.pl-2
-      .col-12.h-50.w-100
-        img.h-100.w-100.pb-1(src='https://loremflickr.com/300/160/girl/all')
-      .col-12.h-50
-        img.h-100.w-100.pt-1(src='https://loremflickr.com/300/150/girl/all')
-  .container.bg-white
-    .d-flex.mt-2
-      .col-2
-      .col-10.d-flex.justify-content-between
-        .col-8.mt-2.text-bole
-          i.fas.fa-home 
-          b   Home 
-          |/ 
-          b Shop
-        .col-4.d-flex.justify-content-end
-          .text-center
-            select.mr-2#perPage(name='perPage')
-              //- a(href="/shop?perPage=4")  4
-              option(value='4') 4
-              option(value='8') 8
+  .row.mb-2
+    table.col-md(cellspacing='2')
+      tbody
+        tr
+          td.w-75(rowspan='3')
+            #demo.carousel.slide(data-ride='carousel')
+              // Indicators
+              ul.carousel-indicators
+                li.active(data-target='#demo', data-slide-to='0')
+                li(data-target='#demo', data-slide-to='1')
+                li(data-target='#demo', data-slide-to='2')
+              // The slideshow
+              .carousel-inner
+                .carousel-item.active
+                  img(src='https://loremflickr.com/600/300/girl/all')
+                .carousel-item
+                  img(src='https://loremflickr.com/600/301/girl/all')
+                .carousel-item
+                  img(src='https://loremflickr.com/600/300/girl/all')
+                // Left and right controls
+                a.carousel-control-prev(href='#demo', data-slide='prev')
+                  span.carousel-control-prev-icon
+                a.carousel-control-next(href='#demo', data-slide='next')
+                  span.carousel-control-next-icon
+          td.w-25
+            img(src='https://loremflickr.com/300/148/girl/all')
+        tr
+          td.w-25
+            img(src='https://loremflickr.com/300/149/girl/all')
+  .row
+    .col.d-flex.mb-2
+      .col-2.mt-2.text-bole
+        i.fas.fa-home 
+        span   Home 
+        |/ 
+        span Shop
+      .col-10.text-center.d-flex.justify-content-end
+        .row
+          .col
+            span(for="perPage") Product/Page:
+          .col
+            select.form-control.form-control-sm#perPage(name='perPage')
+              option(value='8' selected) 8
               option(value='12') 12
               option(value='16') 16
-            label.mt-2(for='perPage') product/page
+            
     .row
       .col-md-2
         .list-group
@@ -95,7 +97,7 @@ block content
                     a.ml-3.btn.btn-primary(href='#') detail
         .row.mt-3
           .col-6
-            p.page-item.mt-2.ml-2
+            span.page-item
                 b page: 
                 span=page
                 |   / 

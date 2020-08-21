@@ -15,8 +15,8 @@ html
             height: 100%;
             }
     body
-        header
-            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize
+        .bg-light
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light.text-capitalize.text-white
                 a.navbar-brand(href='#') 
                     img.rounded.d-inline-block.align-top( src='/images/logo.png', width='30', height='30', alt='')
                     |   fashi
@@ -65,21 +65,11 @@ html
                         else
                             a.nav-item.nav-link.fas.fa-sign-in-alt(href='/auth/login', rel='noopener') 
                                 | Sign in
-        main.bg-light
-            block content
-        //- footer.text-muted.text-center.float-bottom
-        //-     .container
-        //-         p.float-right
-        //-             a(href='#') 
-        //-                 i.fa.fa-chevron-circle-up.fa-3x
-        //-         p Album example is &copy; Bootstrap, but please download and customize it for yourself!
-        //-         p
-        //-             | New to Bootstrap? 
-        //-             a(href='https://getbootstrap.com/') Visit the shoppage
-        //-             |  or read our 
-        //-             a(href='/docs/4.5/getting-started/introduction/') getting started guide
-        //-             | .
-        footer.py-5.bg-dark
-            .container
-                p.m-0.text-center.text-white Copyright &copy; Your Website 2020
+        
+            .container.bg-white.mw-75
+                block content
+            .mw-100
+                block footer
+                    footer.py-5.bg-dark.text-center
+                        p.m-0.text-center.text-white Copyright &copy; Your Website 2020
 

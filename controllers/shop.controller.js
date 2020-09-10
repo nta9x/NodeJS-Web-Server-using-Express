@@ -3,7 +3,7 @@ const { forEach } = require('../db');
 
 module.exports.index = function(req, res) {
     var page = parseInt(req.query.page) || 1;
-    var perPage = parseInt(req.query.perPage) || 8;
+    var perPage = parseInt(req.query.perPage) || 12;
     var products = db.get('products').value();
     var totalPage = Math.ceil(products.length/perPage);
     var drop = (page - 1) * perPage;
@@ -25,3 +25,6 @@ module.exports.index = function(req, res) {
         perPage: perPage
     });
 };
+module.exports.detail = function(req, res){
+    res.render('shop/detail')
+}

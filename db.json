@@ -3,23 +3,16 @@
     {
       "name": "Nguyen Tuan Anh",
       "phone": "0982491541",
-      "email": "nguyentuananhk143@gmail.com",
-      "password": "e10adc3949ba59abbe56e057f20f883e",
-      "id": "6aQRz2UvC"
-    },
-    {
-      "name": "Nguyen",
-      "phone": "0987654321",
       "email": "nta1996@gmail.com",
-      "password": "e10adc3949ba59abbe56e057f20f883e",
-      "id": "LN0Ko0b07"
-    },
-    {
-      "name": "Nguyen Tuan Anh",
-      "phone": "0982491541",
-      "email": "nta1996@gmail.com",
-      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "password": "202cb962ac59075b964b07152d234b70",
       "id": "wGIVYKLzp"
+    },
+    {
+      "name": "nta",
+      "phone": "0982491541",
+      "email": "nta1996",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": "cdtS8CJkH"
     }
   ],
   "products": [

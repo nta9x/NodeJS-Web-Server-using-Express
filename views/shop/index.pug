@@ -4,7 +4,7 @@ block content
     table.col-md(cellspacing='2')
       tbody
         tr
-          td.w-75(rowspan='3')
+          td.w-75.h-50(rowspan='3')
             #demo.carousel.slide(data-ride='carousel')
               // Indicators
               ul.carousel-indicators
@@ -24,7 +24,7 @@ block content
                   span.carousel-control-prev-icon
                 a.carousel-control-next(href='#demo', data-slide='next')
                   span.carousel-control-next-icon
-          td.w-25
+          td            
             img(src='https://loremflickr.com/300/148/girl/all')
         tr
           td.w-25
@@ -94,7 +94,7 @@ block content
                   .d-flex.justify-content-between
                     button.btn.btn-success(href='#')
                       i.fas.fa-shopping-cart
-                    a.ml-3.btn.btn-primary(href='#') detail
+                    a.ml-3.btn.btn-primary(href='/shop/detail') detail
         .row.mt-3
           .col-6
             span.page-item

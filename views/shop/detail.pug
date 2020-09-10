@@ -1,0 +1,49 @@
+extends ../layouts/_layoutPage
+block content
+    .container.p-5.mh-100
+        .row.h
+            .col-md-4.bg-info.p-2
+                .row.h-75.mb-1.p-0
+                    .col-md-12
+                        img.w-100.h-100(src="https://loremflickr.com/350/500", alt="")
+                .row.h-25
+                    .col-md-12
+                        img.w-25.h-100(src="https://loremflickr.com/200/201", alt="")
+                        img.w-25.h-100(src="https://loremflickr.com/200/202", alt="")
+                        img.w-25.h-100(src="https://loremflickr.com/200/200", alt="")
+                        img.w-25.h-100(src="https://loremflickr.com/200/201", alt="")
+            .col-md-6.text-left.text-capitalize.bg-info
+                dl
+                    h1 Name Product
+                    dd type
+                dl 
+                    dt description: 
+                    dd Stay connected either on the phone or the Web with the Galaxy S4 I337 from Samsung. With 16 GB of memory and a 4G connection
+                dl    
+                    dt price: 
+                    dd 
+                        del.font-italic="$ 100"   
+                        h2
+                            .badge.badge-Warning $ 99
+                dl 
+                    dt color:   
+                        select#color(name='color') 
+                            option(value='black' selected) black
+                            option(value='white') white
+                            option(value='blue') blue
+                dl  
+                    dt size:
+                    dd    
+                        .form-check.form-check-inline
+                            input#sizeXL.form-check-input(type='radio', name='size', value='option1')
+                            label.form-check-label(for='sizeXL') XL
+                        .form-check.form-check-inline
+                            input#sizeL.form-check-input(type='radio', name='size', value='option2')
+                            label.form-check-label(for='sizeL') L
+                        .form-check.form-check-inline
+                            input#sizeM.form-check-input(type='radio', name='size', value='option3')
+                            label.form-check-label(for='sizeM') M
+                dl    
+                    dt quantity:
+                    input#quantity(type='number', name='quantity', min='1', value='1')
+                p.btn.btn-success.btn-block add to cart

@@ -13,6 +13,13 @@
       "email": "nta1996",
       "password": "202cb962ac59075b964b07152d234b70",
       "id": "cdtS8CJkH"
+    },
+    {
+      "name": "admin",
+      "phone": "0123456789",
+      "email": "admin",
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "id": "F4BA3lxNV"
     }
   ],
   "products": [

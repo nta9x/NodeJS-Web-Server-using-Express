@@ -9,7 +9,7 @@ const checkLogin = require('./validate/checkLogin');
 
 var cookieParser = require('cookie-parser')
 
-const port = 3000;
+const port = process.env.port || 3000;
 
 const app = express();
 

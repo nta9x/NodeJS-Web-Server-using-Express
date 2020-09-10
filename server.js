@@ -9,8 +9,6 @@ const checkLogin = require('./validate/checkLogin');
 
 var cookieParser = require('cookie-parser')
 
-const port = process.env.port;
-
 const app = express();
 
 app.use(cookieParser('asdhasldhakshuihduasfd'));
@@ -37,4 +35,4 @@ app.use('/auth', logoutRouter);
 
 
 
-app.listen(port, () => console.log('Example app listening at http://localhost:' + port));
+app.listen(process.env.PORT, () => console.log('Example app listening at http://localhost:' + process.env.PORT));
